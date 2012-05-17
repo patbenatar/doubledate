@@ -14,16 +14,16 @@ DoubleDate makes working with jQuery UI DatePicker and Rails a breeze. It allows
 ## Usage
 
 ```coffeescript
-    new DoubleDate(
-      el: $("input.your_date_input")
-    )
+new DoubleDate(
+  el: $("input.your_date_input")
+)
 ```
 
 ## Options (defaults shown)
 
 ```coffeescript
-    new DoubleDate(
-      dateFormat: "mm/dd/yy"
-      altFormat: "yy-mm-dd"
-    )
+new DoubleDate(
+  dateFormat: "mm/dd/yy"
+  altFormat: "yy-mm-dd"
+)
 ```
