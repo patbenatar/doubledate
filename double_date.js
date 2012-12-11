@@ -41,7 +41,7 @@
     };
 
     DoubleDate.prototype._onInputChange = function() {
-      if (this.$hiddenInput.val()) {
+      if (!this.el.val()) {
         return this.$hiddenInput.val("");
       }
     };
