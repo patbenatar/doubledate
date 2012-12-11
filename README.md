@@ -8,7 +8,6 @@ well.
 
 ## Dependencies
 
-* Backbone.js (and therefore Underscore.js)
 * jQuery UI Datepicker (and therefore jQuery)
 
 ## Installation
