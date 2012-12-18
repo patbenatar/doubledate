@@ -19,7 +19,9 @@ class @DoubleDate
 
     # Seed inputs with properly formatted date
     # (jQuery UI will only make it proper if user changes date)
-    date = new Date(@$el.val())
+    # Note: JavaScript's Date object defaults poorly if you don't
+    # specify the time in its constructor.
+    date = new Date("#{@$el.val()} 00:00:00")
     if @$el.val()
       @$hiddenInput.val @_formatDate(@options.altFormat, date)
       @$el.val @_formatDate(@options.dateFormat, date)
