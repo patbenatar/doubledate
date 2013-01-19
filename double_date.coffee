@@ -50,4 +50,4 @@ class @DoubleDate
   # For some reason jQuery UI doesnt update the altField
   # if user clears main input
   _onInputChange: =>
-    @$hiddenInput.val("") unless @el.val()
+    @$hiddenInput.val("") unless @$el.val()
