@@ -22,6 +22,9 @@
       this.$hiddenInput = this.$el.clone();
       this.$hiddenInput.attr("type", "hidden");
       date = new Date("" + (this.$el.val()) + " 00:00:00");
+      if (date.getFullYear() < 1970) {
+        date.setFullYear(date.getFullYear() + 100);
+      }
       if (this.$el.val()) {
         this.$hiddenInput.val(this._formatDate(this.options.altFormat, date));
         this.$el.val(this._formatDate(this.options.dateFormat, date));
