@@ -25,7 +25,7 @@ class @DoubleDate
     date = new Date("#{@$el.val()} 00:00:00")
 
     if (date.getFullYear() < 1970)
-          date.setFullYear(date.getFullYear() + 100)
+      date.setFullYear(date.getFullYear() + 100)
 
     if @$el.val()
       @$hiddenInput.val @_formatDate(@options.altFormat, date)
