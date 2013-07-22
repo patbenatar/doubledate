@@ -24,6 +24,7 @@ class @DoubleDate
 
     date = new Date("#{@$el.val()} 00:00:00")
 
+    # Some browsers will assume a 2-digit year like "12" is "1912"
     if (date.getFullYear() < 1970)
       date.setFullYear(date.getFullYear() + 100)
 
