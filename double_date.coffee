@@ -21,7 +21,12 @@ class @DoubleDate
     # (jQuery UI will only make it proper if user changes date)
     # Note: JavaScript's Date object defaults poorly if you don't
     # specify the time in its constructor.
+
     date = new Date("#{@$el.val()} 00:00:00")
+
+    if (date.getFullYear() < 1970)
+      date.setFullYear(date.getFullYear() + 100)
+
     if @$el.val()
       @$hiddenInput.val @_formatDate(@options.altFormat, date)
       @$el.val @_formatDate(@options.dateFormat, date)
